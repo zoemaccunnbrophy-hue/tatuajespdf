@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe - Tinta que Habla</title>
+  <!-- Fuentes e Íconos FontAwesome -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background: #0f172a; 
+      color: #f8fafc; 
+    }
+
+    .wireframe-page { 
+      width: 100%; 
+      margin: 0 auto; 
+      background: #faf9f6; 
+      color: #1e293b; 
+    }
+
+    /* HEADER */
+    header { 
+      background: #1e293b; 
+      color: #ffffff; 
+      padding: 20px 5%; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+
+    .logo { 
+      font-size: 22px; 
+      font-weight: 800; 
+      color: #ffffff; 
+      text-decoration: none; 
+      display: flex; 
+      align-items: center; 
+      gap: 10px; 
+    }
+
+    .logo span { 
+      color: #b91c1c; 
+    }
+
+    nav ul { 
+      display: flex; 
+      gap: 24px; 
+      list-style: none; 
+    }
+
+    nav a { 
+      color: #cbd5e1; 
+      text-decoration: none; 
+      font-weight: 500; 
+      font-size: 15px; 
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    /* HERO */
+    .hero { 
+      background: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.85)), url('http://googleusercontent.com/image_collection/image_retrieval/17992963702828163205_0') center/cover; 
+      color: white; 
+      padding: 90px 20px; 
+      text-align: center; 
+    }
+
+    .hero h1 { 
+      font-size: 42px; 
+      font-weight: 800; 
+      margin-bottom: 16px; 
+    }
+
+    .hero p { 
+      font-size: 18px; 
+      color: #cbd5e1; 
+      max-width: 600px; 
+      margin: 0 auto 32px auto; 
+    }
+
+    .search-box { 
+      background: white; 
+      padding: 8px; 
+      border-radius: 8px; 
+      max-width: 700px; 
+      margin: 0 auto; 
+      display: flex; 
+      gap: 12px; 
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.4); 
+    }
+
+    .search-box input { 
+      flex: 1; 
+      border: 1px solid #cbd5e1; 
+      padding: 12px 16px; 
+      border-radius: 6px; 
+      font-size: 15px; 
+      outline: none; 
+      color: #1e293b;
+    }
+
+    .search-box button { 
+      background: #b91c1c; 
+      color: white; 
+      border: none; 
+      padding: 12px 24px; 
+      border-radius: 6px; 
+      font-weight: 700; 
+      cursor: pointer; 
+      transition: background 0.2s;
+    }
+
+    .search-box button:hover {
+      background: #991b1b;
+    }
+
+    /* SECCIONES */
+    .section { 
+      padding: 70px 5%; 
+    }
+
+    .section-title { 
+      font-size: 28px; 
+      font-weight: 800; 
+      color: #0f172a; 
+      margin-bottom: 12px; 
+      text-align: center; 
+    }
+
+    .section-subtitle { 
+      text-align: center; 
+      color: #64748b; 
+      margin-bottom: 40px; 
+      font-size: 16px; 
+    }
+
+    /* MOMENTOS DE VIDA */
+    .moments-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+      gap: 20px; 
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .moment-chip { 
+      background: #ffffff; 
+      border: 1px solid #cbd5e1; 
+      padding: 24px 16px; 
+      border-radius: 8px; 
+      text-align: center; 
+      font-weight: 600; 
+      color: #1e293b; 
+      cursor: pointer; 
+      transition: all 0.2s ease;
+    }
+
+    .moment-chip:hover { 
+      background: #b91c1c; 
+      color: white; 
+      border-color: #b91c1c; 
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(185, 28, 28, 0.3);
+    }
+
+    /* TARJETAS DE ESTILOS */
+    .grid-3 { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 28px; 
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card { 
+      background: white; 
+      border-radius: 10px; 
+      border: 1px solid #e2e8f0; 
+      overflow: hidden; 
+      transition: transform 0.2s, box-shadow 0.2s; 
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px -5px rgba(0,0,0,0.1);
+    }
+
+    .card img { 
+      width: 100%; 
+      height: 220px; 
+      object-fit: cover; 
+    }
+
+    .card-body { 
+      padding: 24px; 
+    }
+
+    .card-title { 
+      font-size: 18px; 
+      font-weight: 700; 
+      color: #0f172a; 
+      margin-bottom: 8px; 
+    }
+
+    .card-text { 
+      font-size: 14px; 
+      color: #64748b; 
+      line-height: 1.5; 
+    }
+
+    /* FOOTER */
+    footer { 
+      background: #0f172a; 
+      color: #94a3b8; 
+      padding: 40px 20px; 
+      text-align: center; 
+      font-size: 14px; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wireframe-page">
+    <!-- NAVEGACIÓN -->
+    <header>
+      <a href="#" class="logo"><i class="fa-solid fa-pen-nib"></i> TINTA QUE <span>HABLA</span></a>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Estilos</a></li>
+          <li><a href="#">Significados</a></li>
+          <li><a href="#">Galería</a></li>
+          <li><a href="#">Momentos de Vida</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO / BÚSQUEDA -->
+    <div class="hero">
+      <h1>Descubre el tatuaje que cuenta tu historia</h1>
+      <p>Encuentra el diseño perfecto que represente una idea, una vivencia inolvidable o una marca en tu camino.</p>
+      <div class="search-box">
+        <input type="text" placeholder="¿Qué momento o sentimiento quieres plasmar? (Ej: Superación, Viaje, Familia...)">
+        <button><i class="fa-solid fa-magnifying-glass"></i> Buscar Tatuaje</button>
+      </div>
+    </div>
+
+    <!-- SECCIÓN MOMENTOS DE VIDA -->
+    <div class="section" style="background: #f1f5f9;">
+      <h2 class="section-title">Elige un momento de tu vida</h2>
+      <p class="section-subtitle">Selecciona la vivencia que te marcó para encontrar diseños con simbolismo profundo</p>
+      
+      <div class="moments-grid">
+        <div class="moment-chip">
+          <i class="fa-solid fa-mountain-sun" style="display:block; margin-bottom:10px; font-size:24px;"></i> Superación de un reto
+        </div>
+        <div class="moment-chip">
+          <i class="fa-solid fa-compass" style="display:block; margin-bottom:10px; font-size:24px;"></i> Viaje significativo
+        </div>
+        <div class="moment-chip">
+          <i class="fa-solid fa-heart" style="display:block; margin-bottom:10px; font-size:24px;"></i> Homenaje familiar
+        </div>
+        <div class="moment-chip">
+          <i class="fa-solid fa-seedling" style="display:block; margin-bottom:10px; font-size:24px;"></i> Nuevo comienzo
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCIÓN ESTILOS -->
+    <div class="section">
+      <h2 class="section-title">Explorar por Estilo de Tatuaje</h2>
+      <p class="section-subtitle">Conoce la técnica artística y descubre cómo lucen en la piel</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <img src="http://googleusercontent.com/image_collection/image_retrieval/9238661528406390494_0
